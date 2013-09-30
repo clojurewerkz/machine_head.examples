@@ -12,7 +12,6 @@ Every example is an individual runnable namespace. Run them like so:
     lein run -m "clojurewerkz.machine-head.examples.hello-world"
     lein run -m "clojurewerkz.machine-head.examples.blabbr"
     lein run -m "clojurewerkz.machine-head.examples.weathr"
-    lein run -m "clojurewerkz.machine-head.examples.redelivery"
 
 and so on.
 
