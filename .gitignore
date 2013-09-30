@@ -1,0 +1,13 @@
+pom.xml
+*jar
+/lib/
+/classes/
+/target/
+tmp/*
+.lein*
+checkouts/*
+config/development.clj
+resources/log4j.properties
+# write-ahead log for messages
+*-tcp1270011883/
+antares*
