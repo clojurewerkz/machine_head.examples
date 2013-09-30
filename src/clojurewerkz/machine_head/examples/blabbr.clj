@@ -17,8 +17,8 @@
         conn  (mh/connect "tcp://127.0.0.1:1883" id)
         users ["joe" "aaron" "bob"]]
     (doseq [u users]
-      (let [conn  (mh/connect "tcp://127.0.0.1:1883" (format "consumer.%s" u))]
-        (start-consumer conn u)))
+      (let [c (mh/connect "tcp://127.0.0.1:1883" (format "consumer.%s" u))]
+        (start-consumer c u)))
     (mh/publish conn topic "BOS 101, NYK 89")
     (mh/publish conn topic "ORL 85, ALT 88")
     (Thread/sleep 150)
