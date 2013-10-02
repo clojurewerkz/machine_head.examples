@@ -8,7 +8,6 @@
         conn (mh/connect "tcp://127.0.0.1:1883" id)]
     (mh/subscribe conn ["hello"] (fn [^String topic _ ^bytes payload]
                                    (println (String. payload "UTF-8"))
+                                   (mh/disconnect conn)
                                    (System/exit 0)))
-    (mh/publish conn "hello" "Hello, world")
-    (Thread/sleep 100)
-    (mh/disconnect conn)))
+    (mh/publish conn "hello" "Hello, world")))
