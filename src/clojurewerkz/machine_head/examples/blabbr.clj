@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [clojurewerkz.machine-head.client :as mh]))
 
-(def ^:const topic "nba.scores")
+(def ^:const topic "nba/scores")
 
 (defn start-consumer
   [conn ^String username]
