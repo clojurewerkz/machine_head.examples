@@ -18,6 +18,6 @@ and so on.
 
 ## License
 
-Copyright (C) 2014 Michael S. Klishin
+Copyright (C) 2014-2015 Michael S. Klishin, and the ClojureWerkz team.
 
 Distributed under the Eclipse Public License, the same as Clojure.
