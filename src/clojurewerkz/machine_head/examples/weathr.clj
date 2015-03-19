@@ -28,6 +28,6 @@
     (mh/publish conn "asia/southeast/prc/shanghai"       "Shanghai update")
     (mh/publish conn "europe/italy/roma"                 "Rome update")
     (mh/publish conn "europe/france/paris"               "Paris update")
-    (Thread/sleep 250)
+    (Thread/sleep 150)
     (mh/disconnect conn)
     (System/exit 0)))

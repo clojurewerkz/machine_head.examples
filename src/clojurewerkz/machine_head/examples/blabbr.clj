@@ -21,6 +21,6 @@
         (start-consumer c u)))
     (mh/publish conn topic "BOS 101, NYK 89")
     (mh/publish conn topic "ORL 85, ALT 88")
-    (Thread/sleep 1000)
+    (Thread/sleep 100)
     (mh/disconnect conn)
     (System/exit 0)))

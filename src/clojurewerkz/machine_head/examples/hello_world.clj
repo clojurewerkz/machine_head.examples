@@ -17,6 +17,6 @@
     (mh/subscribe conn {"hello" 0} (fn [^String topic _ ^bytes payload]
                                    (println (String. payload "UTF-8"))))
     (mh/publish conn "hello" "Hello, world")
-    (Thread/sleep 200)
+    (Thread/sleep 100)
     (mh/disconnect conn)
     (System/exit 0)))
