@@ -7,7 +7,7 @@
 (defn start-consumer
   [conn ^String username]
   (mh/subscribe conn
-                [topic]
+                {topic 1}
                 (fn [^String topic _ ^bytes payload]
                   (println (format "[consumer] %s received %s" username (String. payload "UTF-8"))))))
 
@@ -21,6 +21,6 @@
         (start-consumer c u)))
     (mh/publish conn topic "BOS 101, NYK 89")
     (mh/publish conn topic "ORL 85, ALT 88")
-    (Thread/sleep 100)
+    (Thread/sleep 1000)
     (mh/disconnect conn)
     (System/exit 0)))
