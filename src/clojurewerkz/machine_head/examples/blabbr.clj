@@ -7,7 +7,7 @@
 (defn start-consumer
   [conn ^String username]
   (mh/subscribe conn
-                [topic]
+                {topic 1}
                 (fn [^String topic _ ^bytes payload]
                   (println (format "[consumer] %s received %s" username (String. payload "UTF-8"))))))
 
